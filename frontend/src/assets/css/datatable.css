@@ -1,0 +1,65 @@
+.td {
+  @apply tw-px-6 tw-py-3 tw-text-sm tw-text-neutral-500
+    tw-border-solid tw-border-b tw-border-neutral-200;
+}
+
+.td-compact {
+  @apply tw-px-6 tw-py-2 tw-text-sm tw-text-neutral-500
+    tw-border-solid tw-border-b tw-border-neutral-200;
+}
+
+.td-nodata {
+  @apply tw-px-6 tw-py-4 tw-text-sm tw-text-center tw-text-neutral-400
+    tw-border-solid tw-border-b tw-border-neutral-200;
+}
+
+.th {
+  @apply tw-px-6 tw-py-3 tw-border-solid tw-border-b tw-border-neutral-200
+    tw-bg-neutral-100 tw-text-left tw-text-xs
+    tw-leading-4 tw-font-medium tw-text-neutral-500 tw-uppercase tw-tracking-wider;
+}
+
+.th-sort {
+  @apply tw-border-none tw-outline-none tw-whitespace-nowrap tw-cursor-pointer
+    tw-bg-neutral-100 tw-text-left tw-text-xs tw-leading-4 tw-font-medium
+    tw-text-neutral-500 tw-uppercase tw-tracking-wider;
+}
+.th-sort:focus {
+  @apply tw-outline-none;
+}
+.th-sort-asc::after,
+.th-sort-desc::after {
+  @apply tw-pl-1;
+}
+.th-sort-asc::after {
+  content: '\2191';
+}
+.th-sort-desc::after {
+  content: '\2193';
+}
+
+.sort,
+.asc,
+.desc {
+  border: none;
+  padding: 0;
+  font: inherit;
+  outline: 0;
+}
+.sort:focus,
+.asc:focus,
+.desc:focus {
+  outline: 0;
+}
+.sort::after,
+.asc::after {
+  content: '\2191';
+  padding-left: 0.7rem;
+}
+.sort::after {
+  color: white;
+}
+.desc::after {
+  content: '\2193';
+  padding-left: 0.7rem;
+}

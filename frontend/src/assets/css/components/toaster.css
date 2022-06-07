@@ -1,0 +1,12 @@
+.Toastify__toast--info {
+  @apply tw-bg-white tw-pl-16 tw-rounded tw-text-sm tw-text-neutral-700 tw-font-sans tw-font-medium;
+}
+.Toastify__toast--error {
+  @apply tw-bg-white tw-pl-16 tw-rounded tw-text-sm tw-text-neutral-700 tw-font-sans tw-font-medium;
+}
+.Toastify__close-button {
+  @apply tw-text-neutral-700;
+}
+.Toastify__toast-container--top-center.top-center-lower {
+  top: 11em;
+}

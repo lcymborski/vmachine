@@ -1,0 +1,19 @@
+/*! purgecss start ignore */
+@import 'tailwindcss/base';
+
+@import './fonts.css';
+@import './body.css';
+
+@import 'tailwindcss/components';
+
+@import './default.css';
+@import './buttons.css';
+@import './datatable.css';
+@import './forms.css';
+@import './nav.css';
+@import './modal.css';
+@import '../../../node_modules/react-toastify/dist/ReactToastify.min.css';
+@import './components/toaster.css';
+/*! purgecss end ignore */
+
+@import 'tailwindcss/utilities';

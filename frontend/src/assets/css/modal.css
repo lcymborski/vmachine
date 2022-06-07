@@ -1,0 +1,58 @@
+.modal {
+  @apply tw-relative tw-right-auto tw-bottom-auto tw-border-0 tw-bg-white
+    tw-px-6 tw-pt-5 tw-pb-8 tw-overflow-visible tw-rounded-lg tw-outline-none tw-shadow-xl;
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: all 300ms ease-in-out;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal-after-open {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal-before-close {
+  opacity: 0;
+  transform: translateY(1rem);
+}
+
+.modal-normal {
+  min-width: 30rem;
+}
+.modal-big,
+.modal-large {
+  min-width: 90%;
+}
+@media only screen and (min-width: 100em) {
+  .modal-big {
+    min-width: 45rem;
+  }
+  .modal-large {
+    min-width: 80%;
+  }
+}
+
+.modal-overlay {
+  @apply tw-fixed tw-bottom-0 tw-inset-x-0 tw-bg-neutral-500 tw-bg-opacity-50;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+.modal-overlay-small {
+  @apply tw-absolute tw-bottom-0 tw-inset-x-0 tw-bg-neutral-500 tw-bg-opacity-25;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+@screen sm {
+  .modal-overlay {
+    @apply tw-inset-0 tw-flex tw-items-center tw-justify-center;
+  }
+  .modal-overlay-small {
+    @apply tw-inset-0 tw-flex tw-items-center tw-justify-center;
+  }
+}
+.modal-overlay-after-open {
+  opacity: 1;
+}
+.modal-overlay-before-close {
+  opacity: 0;
+}

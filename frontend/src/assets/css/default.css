@@ -1,0 +1,85 @@
+.link {
+  @apply tw-inline-block tw-cursor-pointer tw-outline-none
+    tw-whitespace-nowrap tw-no-underline
+    tw-transition-all tw-duration-300 tw-ease-linear;
+  background-clip: padding-box;
+}
+.link:focus {
+  outline: none;
+}
+.link:disabled {
+  @apply tw-opacity-50 tw-cursor-not-allowed;
+}
+
+.link-primary {
+  @apply tw-bg-transparent tw-text-primary-500;
+}
+.link-primary:hover
+.link-primary:active {
+  @apply tw-text-primary-700;
+}
+
+.link-secondary {
+  @apply tw-bg-transparent tw-text-secondary-500;
+}
+.link-secondary:hover
+.link-secondary:active {
+  @apply tw-text-secondary-700;
+}
+
+.bg-white-a-75 {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+.bg-gray-a-50 {
+  background-color: rgba(200, 200, 200, 0.5);
+}
+
+.shadow-outline-primary {
+  box-shadow: 0 0 0 3px rgba(164, 202, 254, 0.45);
+}
+
+.transition-stroke-opacity {
+  transition: stroke-opacity 0.2s;
+}
+
+.transition-stroke-opacity:hover {
+  stroke-opacity: 0.5;
+}
+
+.cursor-resize {
+  cursor: col-resize;
+}
+.hover\:cursor-resize:hover {
+  cursor: col-resize;
+}
+
+.text-inherit {
+  color: inherit;
+  font: inherit;
+  text-transform: inherit;
+  text-align: inherit;
+}
+
+html {
+  --scrollbarBg: #E2E8F0;
+  --thumbBg: #A0AEC0;
+}
+div::-webkit-scrollbar,
+.scrolled::-webkit-scrollbar {
+  width: 11px;
+}
+div, .scrolled {
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBg) var(--scrollbarBg);
+}
+div::-webkit-scrollbar-track,
+.scrolled::-webkit-scrollbar-track {
+  background: var(--scrollbarBg);
+  border-radius: 6px;
+}
+div::-webkit-scrollbar-thumb,
+.scrolled::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBg) ;
+  border-radius: 6px;
+  border: 1px solid var(--scrollbarBg);
+}

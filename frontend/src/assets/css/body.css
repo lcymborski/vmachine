@@ -1,0 +1,7 @@
+html {
+  min-height: 100%;
+}
+
+body {
+  @apply tw-bg-gradient-to-br tw-from-white tw-to-neutral-200;
+}

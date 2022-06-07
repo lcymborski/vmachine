@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+const fse = require('fs-extra');
+const openapi = require('../lib/openapi');
+const config = require('../config');
+
+const options = {
+  definition: {
+    openapi: '3.0.0',
+    info: {
+      title: 'Vending machine',
+      description: 'Coding challenge',
+      version: '1.0.0',
+    },
+    servers: [
+      {
+        url: `http://127.0.0.1:${config.server.port}/api`,
+      },
+    ],
+    components: {},
+    security: [
+      {
+        cookieAuth: [],
+      },
+    ],
+    paths: {},
+    tags: [
+      {
+        name: 'auth',
+        description: 'Authentication',
+      },
+      {
+        name: 'user',
+        description: 'User account',
+      },
+      {
+        name: 'product',
+        description: 'Product',
+      },
+      {
+        name: 'machine',
+        description: 'Vending machine operations',
+      },
+    ],
+  },
+  apis: ['./lib/*.js', './controllers/*.js'],
+};
+
+openapi.generate(options);
